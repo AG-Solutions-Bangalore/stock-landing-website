@@ -8,7 +8,6 @@ const SectionTitle = (props) => {
     titleClass,
     title,
     titleImage,
-    description,
     hasAfterImage,
   } = props;
 

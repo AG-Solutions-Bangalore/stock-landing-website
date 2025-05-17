@@ -1,14 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Breadcrumb from '../../components/Breadcrumb';
-
 import errorImg from '../../assets/img/error/error.png';
 
 const ErrorMain = () => {
   return (
     <main>
-      <Breadcrumb title="404 page" subTitle="pages" />
-
       <div className="it-error-area pt-120 pb-120">
         <div className="container">
           <div className="row align-items-center">

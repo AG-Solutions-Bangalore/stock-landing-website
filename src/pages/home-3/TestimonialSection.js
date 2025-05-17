@@ -36,6 +36,7 @@ const Testimonial = () => {
   return (
     <div
       className="it-testimonial-area ed-testimonial-ptb fix p-relative"
+      id="it-report"
       style={{ backgroundImage: `url(${testimonialBG})`, paddingTop: 50 }}
     >
       <div className="container">

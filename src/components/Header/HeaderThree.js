@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import MenuItems from "./MenuItems";
 import MenuItemsOnePage from "./MenuItemsOnePage";
-import Logo from "../../assets/img/logo/logo-white-3.png";
-import OffCanvasInsta from "../OffCanvas";
 
 const HeaderThree = (props) => {
-  const { headerClass, headerLogo, onePage, parentMenu } = props;
+  const { headerClass,  parentMenu } = props;
   const [isVisible, setIsVisible] = useState(false);
   const [isOffCanvasOpen, setIsOffCanvasOpen] = useState(false);
 
@@ -128,7 +125,10 @@ const HeaderThree = (props) => {
                       </div>
 
                       <div className="ed-header-3-button d-none d-lg-block">
-                        <Link className="ed-btn-square" to="https://stock.agsdemo.in/">
+                        <Link
+                          className="ed-btn-square"
+                          to="https://stock.agsdemo.in/"
+                        >
                           Login To Admin Panel
                         </Link>
                       </div>
@@ -208,8 +208,8 @@ const HeaderThree = (props) => {
           <div className="itoffcanvas__text">
             <p style={{ textAlign: "justify" }}>
               Experience complete control over your inventory with real-time
-              updates, low-stock alerts, and seamless stock movement
-              tracking all in one powerful platform.
+              updates, low-stock alerts, and seamless stock movement tracking
+              all in one powerful platform.
             </p>
           </div>
           <div className="it-menu-mobile d-xl-none">
@@ -229,7 +229,7 @@ const HeaderThree = (props) => {
               </div>
               <div className="itoffcanvas__info-address">
                 <span>Email</span>
-                <a href="maito:hello@yourmail.com">info</a>
+                <a href="maito:info@ag-solutions.in">info@ag-solutions.in</a>
               </div>
             </div>
             <div className="it-info-wrapper mb-20 d-flex align-items-center">
@@ -240,7 +240,7 @@ const HeaderThree = (props) => {
               </div>
               <div className="itoffcanvas__info-address">
                 <span>Phone</span>
-                <a href="tel:(00)45611227890">(00) 456 1122 7890</a>
+                <a href="tel:+918867171060">8867171060</a>
               </div>
             </div>
             <div className="it-info-wrapper mb-20 d-flex align-items-center">
@@ -252,10 +252,11 @@ const HeaderThree = (props) => {
               <div className="itoffcanvas__info-address">
                 <span>Location</span>
                 <a
-                  href="htits://www.google.com/maps/@37.4801311,22.8928877,3z"
+                  href="https://maps.app.goo.gl/oTeYoH7T61wwgdfS8"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Riverside 255, San Francisco.
+                  Jayanagara 9th Block, Bengaluru, 560069{" "}
                 </a>
               </div>
             </div>

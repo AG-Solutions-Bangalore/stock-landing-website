@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import contactBG from "../../assets/img/contact/bg-5.jpg";
 
 const EnquiryForm = () => {
   const [formData, setFormData] = useState({
@@ -92,121 +93,126 @@ const EnquiryForm = () => {
   };
 
   return (
-    <div className="enquiry-form-container" style={{ position: "relative" }}>
-      <form onSubmit={handleSubmit}>
-        <div className="row">
-          <div className="col-12 mb-15">
-            <div className="it-contact-input-box">
-              <input
-                type="text"
-                name="enquiryFullName"
-                placeholder="Your Name"
-                value={formData.enquiryFullName}
-                onChange={handleChange}
-              />
-              {errors.enquiryFullName && (
-                <span style={{ color: "red", fontSize: "13px" }}>
-                  {errors.enquiryFullName}
-                </span>
-              )}
+    <div
+      className="it-contact-wrap"
+      style={{ backgroundImage: `url(${contactBG})` }}
+    >
+      <h4 className="it-contact-title pb-15">Get in Touch</h4>
+      <div className="enquiry-form-container" style={{ position: "relative" }}>
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-12 mb-15">
+              <div className="it-contact-input-box">
+                <input
+                  type="text"
+                  name="enquiryFullName"
+                  placeholder="Your Name"
+                  value={formData.enquiryFullName}
+                  onChange={handleChange}
+                />
+                {errors.enquiryFullName && (
+                  <span style={{ color: "red", fontSize: "13px" }}>
+                    {errors.enquiryFullName}
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="col-12 mb-15">
+              <div className="it-contact-input-box">
+                <input
+                  type="email"
+                  name="enquiryEmail"
+                  placeholder="Your Email"
+                  value={formData.enquiryEmail}
+                  onChange={handleChange}
+                />
+                {errors.enquiryEmail && (
+                  <span style={{ color: "red", fontSize: "13px" }}>
+                    {errors.enquiryEmail}
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="col-12 mb-15">
+              <div className="it-contact-input-box">
+                <input
+                  type="text"
+                  name="enquiryMobile"
+                  placeholder="Phone"
+                  value={formData.enquiryMobile}
+                  onChange={handleChange}
+                />
+                {errors.enquiryMobile && (
+                  <span style={{ color: "red", fontSize: "13px" }}>
+                    {errors.enquiryMobile}
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="col-12 mb-30">
+              <div className="it-contact-textarea-box">
+                <textarea
+                  name="enquiryMessage"
+                  placeholder="Message"
+                  value={formData.enquiryMessage}
+                  onChange={handleChange}
+                />
+                {errors.enquiryMessage && (
+                  <span style={{ color: "red", fontSize: "13px" }}>
+                    {errors.enquiryMessage}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
-          <div className="col-12 mb-15">
-            <div className="it-contact-input-box">
-              <input
-                type="email"
-                name="enquiryEmail"
-                placeholder="Your Email"
-                value={formData.enquiryEmail}
-                onChange={handleChange}
-              />
-              {errors.enquiryEmail && (
-                <span style={{ color: "red", fontSize: "13px" }}>
-                  {errors.enquiryEmail}
-                </span>
-              )}
-            </div>
-          </div>
-          <div className="col-12 mb-15">
-            <div className="it-contact-input-box">
-              <input
-                type="text"
-                name="enquiryMobile"
-                placeholder="Phone"
-                value={formData.enquiryMobile}
-                onChange={handleChange}
-              />
-              {errors.enquiryMobile && (
-                <span style={{ color: "red", fontSize: "13px" }}>
-                  {errors.enquiryMobile}
-                </span>
-              )}
-            </div>
-          </div>
-          <div className="col-12 mb-30">
-            <div className="it-contact-textarea-box">
-              <textarea
-                name="enquiryMessage"
-                placeholder="Message"
-                value={formData.enquiryMessage}
-                onChange={handleChange}
-              />
-              {errors.enquiryMessage && (
-                <span style={{ color: "red", fontSize: "13px" }}>
-                  {errors.enquiryMessage}
-                </span>
-              )}
-            </div>
-          </div>
-        </div>
-        <button type="submit" className="ed-btn-square">
-          <span>Submit Now</span>
-        </button>
-      </form>
-      {toast.show && (
-        <div
-          className="toast-notification"
-          style={{
-            position: "fixed",
-            top: "80px",
-            right: "20px",
-            minWidth: "250px",
-            padding: "16px 20px",
-            backgroundColor: toast.type === "success" ? "#e6ffed" : "#ffe6e6",
-            color: toast.type === "success" ? "#2e7d32" : "#c62828",
-            border: `1px solid ${
-              toast.type === "success" ? "#81c784" : "#ef5350"
-            }`,
-            borderLeft: `5px solid ${
-              toast.type === "success" ? "#4caf50" : "#f44336"
-            }`,
-            borderRadius: "8px",
-            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-            zIndex: 9999,
-            animation: "slideIn 0.5s ease forwards",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            gap: "10px",
-          }}
-        >
-          <span style={{ flex: 1 }}>{toast.message}</span>
-          <button
-            onClick={() => setToast({ show: false, type: "", message: "" })}
+          <button type="submit" className="ed-btn-square">
+            <span>Submit Now</span>
+          </button>
+        </form>
+        {toast.show && (
+          <div
+            className="toast-notification"
             style={{
-              background: "transparent",
-              border: "none",
+              position: "fixed",
+              top: "80px",
+              right: "20px",
+              minWidth: "250px",
+              padding: "16px 20px",
+              backgroundColor: toast.type === "success" ? "#e6ffed" : "#ffe6e6",
               color: toast.type === "success" ? "#2e7d32" : "#c62828",
-              fontSize: "16px",
-              cursor: "pointer",
-              fontWeight: "bold",
+              border: `1px solid ${
+                toast.type === "success" ? "#81c784" : "#ef5350"
+              }`,
+              borderLeft: `5px solid ${
+                toast.type === "success" ? "#4caf50" : "#f44336"
+              }`,
+              borderRadius: "8px",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+              zIndex: 9999,
+              animation: "slideIn 0.5s ease forwards",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "10px",
             }}
           >
-            ×
-          </button>
+            <span style={{ flex: 1 }}>{toast.message}</span>
+            <button
+              onClick={() => setToast({ show: false, type: "", message: "" })}
+              style={{
+                background: "transparent",
+                border: "none",
+                color: toast.type === "success" ? "#2e7d32" : "#c62828",
+                fontSize: "16px",
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+            >
+              ×
+            </button>
 
-          <style>
-            {`
+            <style>
+              {`
         @keyframes slideIn {
           from {
             opacity: 0;
@@ -218,9 +224,10 @@ const EnquiryForm = () => {
           }
         }
       `}
-          </style>
-        </div>
-      )}
+            </style>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

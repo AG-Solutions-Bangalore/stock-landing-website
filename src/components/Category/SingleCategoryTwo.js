@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Image from "../../assets/img/category/category-4-1.png";
 
 const SingleCategoryTwo = (props) => {
   const { itemClass, iconImage, title } = props;
@@ -17,7 +16,7 @@ const SingleCategoryTwo = (props) => {
           }}
         >
           <img
-            src={iconImage ? iconImage : Image}
+            src={iconImage ? iconImage : ""}
             alt={title}
             style={{
               width: "100%",
