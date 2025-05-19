@@ -1,9 +1,9 @@
-import React from 'react';
-import HeaderThree from '../../components/Header/HeaderThree';
-import FooterTwo from '../../components/Footer/FooterTwo';
-import HomeThreeMain from './HomeThreeMain';
+import React from "react";
+import HeaderThree from "../../components/Header/HeaderThree";
+import FooterTwo from "../../components/Footer/FooterTwo";
+import HomeThreeMain from "./HomeThreeMain";
 
-import Logo from '../../assets/img/logo/logo-white-4.png';
+import Logo from "../../assets/img/logo/logo-white-4.png";
 
 const HomeThree = () => {
   return (

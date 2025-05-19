@@ -1,22 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import homeImg1 from "../../assets/img/menu/home-1.jpg";
-import homeImg2 from "../../assets/img/menu/home-2.jpg";
-import homeImg3 from "../../assets/img/menu/home-3.jpg";
-import homeImg4 from "../../assets/img/menu/home-4.jpg";
-import homeImg5 from "../../assets/img/menu/home-5.jpg";
-
 const MenuItemsOnePage = (props) => {
   const { parentMenu, onePageStyle, mobileMenu } = props;
   const [home, setHome] = useState(false);
   const [isActive, setIsActive] = useState(parentMenu);
 
-  const openMobileMenu = (menu) => {
-    if (menu === "home") {
-      setHome(!home);
-    }
-  };
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -121,17 +110,18 @@ const MenuItemsOnePage = (props) => {
       ) : onePageStyle === "onePage3" ? (
         <ul className="onepage-menu justify-content-xl-center">
           {onePageHomeMenu}
-          <li className={isActive === "it-about" ? "active" : ""}>
-            <Link to="#it-about" onClick={() => scrollToSection("it-about")}>
-              <span>About us</span>
-            </Link>
-          </li>
+
           <li className={isActive === "it-feature" ? "active" : ""}>
             <Link
               to="#it-feature"
               onClick={() => scrollToSection("it-feature")}
             >
               <span>Features</span>
+            </Link>
+          </li>
+          <li className={isActive === "it-report" ? "active" : ""}>
+            <Link to="#it-report" onClick={() => scrollToSection("it-report")}>
+              <span>Report</span>
             </Link>
           </li>
           <li className={isActive === "it-contact" ? "active" : ""}>

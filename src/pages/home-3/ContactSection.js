@@ -1,24 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
-import {
-  differenceInSeconds,
-  differenceInMinutes,
-  differenceInHours,
-  differenceInDays,
-} from "date-fns";
-import emailjs from "@emailjs/browser";
+import React from "react";
 import SectionTitle from "../../components/SectionTitle";
 
-import shapeImg1 from "../../assets/img/contact/shape-1-1.png";
 import shapeImg2 from "../../assets/img/contact/shape-1-2.png";
 import shapeImg3 from "../../assets/img/contact/shape-1-3.png";
 import shapeImg4 from "../../assets/img/contact/shape-1-4.png";
-import titleImg from "../../assets/img/category/title.svg";
-import contactBG from "../../assets/img/contact/bg-5.jpg";
 import EnquiryForm from "./ContactForm";
 
 const Contact = () => {
-
-
   return (
     <div
       id="it-contact"
@@ -76,59 +64,7 @@ const Contact = () => {
             data-wow-duration=".9s"
             data-wow-delay=".5s"
           >
-            <div
-              className="it-contact-wrap"
-              style={{ backgroundImage: `url(${contactBG})` }}
-            >
-              <h4 className="it-contact-title pb-15">Get in Touch</h4>
-              {/* <form ref={formRef} onSubmit={handleSubmit}>
-                <div className="row">
-                  <div className="col-12 mb-15">
-                    <div className="it-contact-input-box">
-                      <input
-                        type="text"
-                        name="enquiryFullName"
-                        placeholder="Your Name"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="col-12 mb-15">
-                    <div className="it-contact-input-box">
-                      <input
-                        type="email"
-                        name="enquiryEmail"
-                        placeholder="Your Email"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="col-12 mb-15">
-                    <div className="it-contact-input-box">
-                      <input
-                        type="text"
-                        name="enquiryMobile"
-                        placeholder="Phone"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="col-12 mb-30">
-                    <div className="it-contact-textarea-box">
-                      <textarea
-                        name="enquiryMessage"
-                        placeholder="Message"
-                        required
-                      ></textarea>
-                    </div>
-                  </div>
-                </div>
-                <button type="submit" className="ed-btn-square">
-                  <span>submit now</span>
-                </button>
-              </form> */}
-              <EnquiryForm />
-            </div>
+            <EnquiryForm />
           </div>
         </div>
       </div>
