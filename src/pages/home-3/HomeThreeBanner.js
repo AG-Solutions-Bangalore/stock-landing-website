@@ -97,7 +97,7 @@ const Banner = () => {
                           </div>
                           <div className="ed-slider-2-button">
                             <div>
-                              <Link className="ed-btn-square" to="/about-us">
+                              <Link className="ed-btn-square" to="/">
                                 View Integrations
                               </Link>
                             </div>
@@ -164,7 +164,7 @@ const Banner = () => {
                           </div>
                           <div className="ed-slider-2-button">
                             <div>
-                              <Link className="ed-btn-square" to="/about-us">
+                              <Link className="ed-btn-square" to="/">
                                 View Integrations
                               </Link>
                             </div>

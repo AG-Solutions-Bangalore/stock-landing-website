@@ -42,7 +42,7 @@ const PopupContactForm = () => {
               padding: "30px",
               maxWidth: "600px",
               width: "100%",
-              maxHeight: "90vh", 
+              maxHeight: "100vh", 
               overflowY: "auto", 
               position: "relative",
               animation: "scaleIn 0.4s ease-in-out",

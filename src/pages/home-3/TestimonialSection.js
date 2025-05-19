@@ -56,7 +56,7 @@ const Testimonial = () => {
             <div className="ed-testimonial-wrapper">
               <div className="swiper-container">
                 <Swiper
-                  modules={[Autoplay]}
+                  // modules={[Autoplay]}
                   {...sliderOption}
                   className="swiper-wrapper ed-testimonial-active"
                 >
