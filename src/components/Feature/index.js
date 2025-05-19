@@ -8,6 +8,7 @@ const SingleFeature = (props) => {
   return (
     <div
       className={itemClass ? itemClass : "it-feature-3-item mb-30 text-center"}
+      style={{minHeight:400}}
     >
       <div className="it-feature-3-icon">
         <span>
