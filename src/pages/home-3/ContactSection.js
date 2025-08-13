@@ -37,9 +37,10 @@ const Contact = () => {
                 titleImage=""
               />
               <div className="it-contact-text pb-15">
-                <h5 className="fw-semibold mb-2" style={{ color: "#2fb899" }}>
+                <h5 className="fw-semibold mb-2" style={{ color: "#FF9E0E" }}>
                   Need Assistance?
                 </h5>
+
                 <p className="mb-2">
                   Our stock management experts are ready to help you. Whether
                   you're aiming to streamline warehouse operations, minimize

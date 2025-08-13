@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import contactBG from "../../assets/img/contact/bg-5.jpg";
 
-const EnquiryForm = () => {
+const EnquiryForm = ({ handleClose, type }) => {
   const [formData, setFormData] = useState({
     enquiryFullName: "",
+    enquiryCompanyName: "",
+    enquiryProductName: "",
     enquiryEmail: "",
     enquiryMobile: "",
     enquiryMessage: "",
@@ -17,6 +19,12 @@ const EnquiryForm = () => {
 
     if (!formData.enquiryFullName.trim()) {
       newErrors.enquiryFullName = "Name is required";
+    }
+    if (!formData.enquiryCompanyName.trim()) {
+      newErrors.enquiryCompanyName = "Company Name is required";
+    }
+    if (!formData.enquiryProductName.trim()) {
+      newErrors.enquiryProductName = "Product Name is required";
     }
     if (!formData.enquiryEmail.trim()) {
       newErrors.enquiryEmail = "Email is required";
@@ -55,7 +63,7 @@ const EnquiryForm = () => {
 
     try {
       const response = await fetch(
-        "https://agsdemo.in/stockapi/public/api/createEnquiry",
+        "https://bizstock.in/public/api/createEnquiry",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -64,19 +72,27 @@ const EnquiryForm = () => {
       );
 
       const result = await response.json();
-
-      if (response.ok) {
+  
+      if (result.code == 200) {
         setToast({
           show: true,
           type: "success",
-          message: "Enquiry submitted successfully!",
+          message: result.msg || "Enquiry submitted successfully!",
         });
         setFormData({
           enquiryFullName: "",
           enquiryEmail: "",
           enquiryMobile: "",
           enquiryMessage: "",
+          enquiryCompanyName: "",
+          enquiryProductName: "",
         });
+
+       if (type === "drop") {
+    setTimeout(() => {
+      handleClose();
+    }, 1500); 
+  }
         setErrors({});
       } else {
         setToast({
@@ -86,6 +102,7 @@ const EnquiryForm = () => {
         });
       }
     } catch (error) {
+      console.log(error, "error");
       setToast({ show: true, type: "error", message: "Something went wrong!" });
     }
 
@@ -106,7 +123,7 @@ const EnquiryForm = () => {
                 <input
                   type="text"
                   name="enquiryFullName"
-                  placeholder="Your Name"
+                  placeholder="Full Name"
                   value={formData.enquiryFullName}
                   onChange={handleChange}
                 />
@@ -122,7 +139,7 @@ const EnquiryForm = () => {
                 <input
                   type="email"
                   name="enquiryEmail"
-                  placeholder="Your Email"
+                  placeholder="Email"
                   value={formData.enquiryEmail}
                   onChange={handleChange}
                 />
@@ -149,6 +166,38 @@ const EnquiryForm = () => {
                 )}
               </div>
             </div>
+            <div className="col-6 mb-15">
+              <div className="it-contact-input-box">
+                <input
+                  type="text"
+                  name="enquiryCompanyName"
+                  placeholder="Company Name"
+                  value={formData.enquiryCompanyName}
+                  onChange={handleChange}
+                />
+                {errors.enquiryCompanyName && (
+                  <span style={{ color: "red", fontSize: "13px" }}>
+                    {errors.enquiryCompanyName}
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="col-6 mb-15">
+              <div className="it-contact-input-box">
+                <input
+                  type="text"
+                  name="enquiryProductName"
+                  placeholder="Product Name"
+                  value={formData.enquiryProductName}
+                  onChange={handleChange}
+                />
+                {errors.enquiryProductName && (
+                  <span style={{ color: "red", fontSize: "13px" }}>
+                    {errors.enquiryProductName}
+                  </span>
+                )}
+              </div>
+            </div>
             <div className="col-12 mb-30">
               <div className="it-contact-textarea-box">
                 <textarea
@@ -165,8 +214,19 @@ const EnquiryForm = () => {
               </div>
             </div>
           </div>
-          <button type="submit" className="ed-btn-square">
+          {/* <button type="submit" className="ed-btn-square">
             <span>Submit Now</span>
+          </button> */}
+          <button
+            type="submit"
+            className="ed-btn-square"
+            style={{
+              padding: "0 29px",
+              height: "46px",
+              lineHeight: "46px",
+            }}
+          >
+            Submit
           </button>
         </form>
         {toast.show && (
