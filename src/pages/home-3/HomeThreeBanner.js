@@ -24,7 +24,13 @@ const Banner = () => {
       prevEl: ".slider-next",
     },
   };
-
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    // setIsActive(id);
+  };
   return (
     <div className="ed-slider-2-area p-relative fix">
       <div className="ed-slider-2-arrow-box">
@@ -97,7 +103,11 @@ const Banner = () => {
                           </div>
                           <div className="ed-slider-2-button">
                             <div>
-                              <Link className="ed-btn-square" to="/">
+                              <Link
+                                className="ed-btn-square"
+                                to="#it-contact"
+                                onClick={() => scrollToSection("it-contact")}
+                              >
                                 View Integrations
                               </Link>
                             </div>
@@ -164,7 +174,11 @@ const Banner = () => {
                           </div>
                           <div className="ed-slider-2-button">
                             <div>
-                              <Link className="ed-btn-square" to="/">
+                              <Link
+                                className="ed-btn-square"
+                                to="#it-contact"
+                                onClick={() => scrollToSection("it-contact")}
+                              >
                                 View Integrations
                               </Link>
                             </div>

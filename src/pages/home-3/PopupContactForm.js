@@ -31,7 +31,6 @@ const PopupContactForm = () => {
             alignItems: "center",
             zIndex: 1000,
             animation: "fadeIn 0.4s ease-in-out",
-            // padding: "20px",
             boxSizing: "border-box",
           }}
         >
@@ -42,8 +41,8 @@ const PopupContactForm = () => {
               padding: "30px",
               maxWidth: "600px",
               width: "100%",
-              maxHeight: "100vh", 
-              overflowY: "auto", 
+              maxHeight: "100vh",
+              overflowY: "auto",
               position: "relative",
               animation: "scaleIn 0.4s ease-in-out",
               boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
@@ -65,11 +64,9 @@ const PopupContactForm = () => {
               ×
             </button>
 
-            {/* Contact Form */}
-            <EnquiryForm />
+            <EnquiryForm handleClose={handleClose} type="drop"/>
           </div>
 
-          {/* Animation Styles */}
           <style>
             {`
       @keyframes fadeIn {

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MenuItemsOnePage from "./MenuItemsOnePage";
-
+import Logo from "../../assets/img/logo/bs-logo.png";
 const HeaderThree = (props) => {
-  const { headerClass,  parentMenu } = props;
+  const { headerClass, parentMenu } = props;
   const [isVisible, setIsVisible] = useState(false);
   const [isOffCanvasOpen, setIsOffCanvasOpen] = useState(false);
 
@@ -40,7 +40,7 @@ const HeaderThree = (props) => {
                   <div className="col-xl-3 col-lg-6 col-md-6 col-6">
                     <div className="fw-semibold d-flex align-items-center gap-2">
                       <div className="d-flex align-items-center">
-                        <svg
+                        {/* <svg
                           width="38"
                           height="38"
                           viewBox="0 0 24 24"
@@ -69,14 +69,20 @@ const HeaderThree = (props) => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           />
-                        </svg>
+                        </svg> */}
+                        <img
+                          src={Logo}
+                          alt="logo"
+                          className="img-fluid"
+                          style={{ width: 40, height: 40 }}
+                        />
                       </div>
 
                       <div className="d-flex flex-column">
                         <h4
                           className="ed-section-title"
                           style={{
-                            color: "#2fb899",
+                            color: "#FF9E0E",
                             marginBottom: 0,
                             // marginTop: 5,
                             fontFamily: "'Poppins', sans-serif",
@@ -85,7 +91,7 @@ const HeaderThree = (props) => {
                             letterSpacing: "0.5px",
                           }}
                         >
-                          Stock
+                          BizStock
                         </h4>
                       </div>
                     </div>
@@ -127,7 +133,7 @@ const HeaderThree = (props) => {
                       <div className="ed-header-3-button d-none d-lg-block">
                         <Link
                           className="ed-btn-square"
-                          to="https://stock.agsdemo.in/"
+                          to="https://admin.bizstock.in/"
                         >
                           Login To Admin Panel
                         </Link>
@@ -155,7 +161,7 @@ const HeaderThree = (props) => {
           <div className="itoffcanvas__logo">
             <div className="fw-semibold d-flex align-items-center gap-2">
               <div className="d-flex align-items-center">
-                <svg
+                {/* <svg
                   width="38"
                   height="38"
                   viewBox="0 0 24 24"
@@ -184,14 +190,20 @@ const HeaderThree = (props) => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                </svg>
+                </svg> */}
+                <img
+                  src={Logo}
+                  alt="logo"
+                  className="img-fluid"
+                  style={{ width: 40, height: 40 }}
+                />
               </div>
 
               <div className="d-flex flex-column">
                 <h4
                   className="ed-section-title"
                   style={{
-                    color: "#2fb899",
+                    color: "#FF9E0E",
                     marginBottom: 0,
                     // marginTop: 5,
                     fontFamily: "'Poppins', sans-serif",
@@ -200,7 +212,7 @@ const HeaderThree = (props) => {
                     letterSpacing: "0.5px",
                   }}
                 >
-                  Stock
+                  BizStock
                 </h4>
               </div>
             </div>

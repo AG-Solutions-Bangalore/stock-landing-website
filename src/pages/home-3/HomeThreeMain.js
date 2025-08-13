@@ -11,11 +11,8 @@ const HomeThreeMain = () => {
       <Banner />
       <Category />
       <PopupContactForm />
-
-     
       <Testimonial />
       <Contact />
- 
     </main>
   );
 };
