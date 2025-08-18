@@ -148,12 +148,12 @@ const Banner = () => {
                         <div className="ed-slider-2-content">
                           <div className="ed-slider-2-subtitle pb-10">
                             <div>
-                              <span>Stay in Control, Stay Ahead</span>
+                              <span>Stay in Control,Stay Ahead</span>
                             </div>
                           </div>
                           <div className="ed-slider-title text-white">
                             <div>
-                              <span>Real-Time Stock Monitoring</span>
+                              <span>Real-Time Stock</span>
                             </div>
                             <div>
                               <span>
