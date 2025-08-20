@@ -231,6 +231,11 @@ const HeaderThree = (props) => {
               mobileMenu="show"
             />
           </div>
+          <div className="ed-header-3-button d-block d-lg-none">
+            <Link className="ed-btn-square" to="https://admin.bizstock.in/">
+              Login To Admin Panel
+            </Link>
+          </div>
           <div className="itoffcanvas__info">
             <h3 className="offcanva-title">Get In Touch</h3>
             <div className="it-info-wrapper mb-20 d-flex align-items-center">
