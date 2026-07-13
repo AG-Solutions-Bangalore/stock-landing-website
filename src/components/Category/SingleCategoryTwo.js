@@ -18,6 +18,8 @@ const SingleCategoryTwo = (props) => {
           <img
             src={iconImage ? iconImage : ""}
             alt={title}
+            loading="lazy"
+
             style={{
               width: "100%",
               height: "auto",

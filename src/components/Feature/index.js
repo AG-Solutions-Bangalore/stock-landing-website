@@ -18,7 +18,7 @@ const SingleFeature = (props) => {
     >
       <div className="it-feature-3-icon">
         <span>
-          <img src={image} width={50} height={50} />
+          <img src={image} width={50} height={50} alt="img" />
         </span>
       </div>
       <div className="it-feature-3-content">

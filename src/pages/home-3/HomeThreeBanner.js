@@ -34,10 +34,12 @@ const Banner = () => {
   return (
     <div className="ed-slider-2-area p-relative fix">
       <div className="ed-slider-2-arrow-box">
-        <button className="slider-prev">
+        <button className="slider-prev" aria-label="Previous slide"
+>
           <PrevArrow />
         </button>
-        <button className="slider-next">
+        <button className="slider-next" aria-label="Next slide"
+>
           <NextArrow />
         </button>
       </div>
@@ -59,10 +61,12 @@ const Banner = () => {
                 </div>
 
                 <div className="ed-slider-2-shape-1">
-                  <img src={shapeImg1} alt="" />
+                  <img      loading="lazy"
+src={shapeImg1} alt="shapeImg1" />
                 </div>
                 <div className="ed-slider-2-shape-2">
-                  <img src={shapeImg2} alt="" />
+                  <img     loading="lazy"
+ src={shapeImg2} alt="shapeImg1" />
                 </div>
                 <div className="ed-slider-2-wrap p-relative">
                   <div
@@ -130,10 +134,12 @@ const Banner = () => {
                 </div>
 
                 <div className="ed-slider-2-shape-1">
-                  <img src={shapeImg1} alt="" />
+                  <img     loading="lazy"
+ src={shapeImg1} alt="shapeImg2" />
                 </div>
                 <div className="ed-slider-2-shape-2">
-                  <img src={shapeImg2} alt="" />
+                  <img      loading="lazy"
+src={shapeImg2} alt="shapeImg2" />
                 </div>
                 <div className="ed-slider-2-wrap p-relative">
                   <div
