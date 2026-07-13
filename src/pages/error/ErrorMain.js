@@ -27,7 +27,8 @@ const ErrorMain = () => {
             </div>
             <div className="col-xl-6 col-lg-6 order-0 order-lg-1">
               <div className="it-error-thumb">
-                <img src={errorImg} alt="" />
+                <img src={errorImg}     loading="lazy"
+ alt="error" />
               </div>
             </div>
           </div>

@@ -8,7 +8,7 @@ const Preloader = () => {
       <div id="it-loading-center">
         <div id="it-loading-absolute">
           <div className="it-loading-content">
-            <img className="it-loading-logo" src={Logo} alt="" />
+            <img className="it-loading-logo" src={Logo} alt="logo" />
 
       
           </div>

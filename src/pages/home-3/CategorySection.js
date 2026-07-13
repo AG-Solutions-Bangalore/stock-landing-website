@@ -15,7 +15,8 @@ const Category = () => {
   return (
     <div className="it-category-4-area p-relative pt-120 pb-90" id="it-feature">
       <div className="it-category-4-shape-1 d-none d-lg-block">
-        <img src={shapeImg} alt="" />
+        <img src={shapeImg}      loading="lazy"
+ alt="shapeImg" />
       </div>
       <div className="container">
         <div className="it-category-4-title-wrap mb-60">

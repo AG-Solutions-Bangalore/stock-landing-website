@@ -13,13 +13,16 @@ const Contact = () => {
       className="it-contact-area it-contact-style-4 z-index p-relative pb-30 pt-30 pt-md-50 pb-md-100 "
     >
       <div className="it-contact-shape-2 d-none d-lg-block">
-        <img src={shapeImg2} alt="" />
+        <img src={shapeImg2}     loading="lazy"
+ alt="shapeImg2" />
       </div>
       <div className="it-contact-shape-3 d-none d-xxl-block">
-        <img src={shapeImg3} alt="" />
+        <img src={shapeImg3}     loading="lazy"
+ alt="shapeImg2" />
       </div>
       <div className="it-contact-shape-4 d-none d-lg-block">
-        <img src={shapeImg4} alt="" />
+        <img src={shapeImg4}     loading="lazy"
+ alt="shapeImg2" />
       </div>
       <div className="container">
         <div className="row align-items-center">

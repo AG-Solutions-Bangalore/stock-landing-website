@@ -18,9 +18,10 @@ const SectionTitle = (props) => {
       }
     >
       <span className={subTitleClass ? subTitleClass : 'ed-section-subtitle'}>
-        <img src={titleImage ? titleImage : ''} alt="" />
+        <img src={titleImage ? titleImage : ''}     loading="lazy"
+ alt="title" />
         {subTitle ? subTitle : ''}{' '}
-        {hasAfterImage && <img src={titleImage} alt="" />}
+        {hasAfterImage && <img src={titleImage} alt="title" />}
       </span>
       <h4 className={titleClass ? titleClass : 'ed-section-title'}>
         {title ? title : 'Browse By Categories'}

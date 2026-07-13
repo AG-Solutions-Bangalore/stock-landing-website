@@ -102,7 +102,6 @@ const EnquiryForm = ({ handleClose, type }) => {
         });
       }
     } catch (error) {
-      console.log(error, "error");
       setToast({ show: true, type: "error", message: "Something went wrong!" });
     }
 

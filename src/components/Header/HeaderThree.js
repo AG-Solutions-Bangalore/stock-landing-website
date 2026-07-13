@@ -107,11 +107,13 @@ const HeaderThree = (props) => {
                     </div>
                   </div>
                   <div className="col-xl-3 col-lg-6 col-md-6 col-6">
-                    <div class="ed-header-3-right d-flex align-items-center justify-content-end justify-content-xl-center">
+                    <div className="ed-header-3-right d-flex align-items-center justify-content-end justify-content-xl-center">
                       <div className="ed-header-3-bar">
                         <button
                           className="it-menu-bar"
                           onClick={() => setIsOffCanvasOpen(true)}
+                            aria-label="Open navigation menu"
+
                         >
                           <svg
                             width="24"
@@ -191,12 +193,13 @@ const HeaderThree = (props) => {
                     strokeLinejoin="round"
                   />
                 </svg> */}
-                <img
-                  src={Logo}
-                  alt="logo"
-                  className="img-fluid"
-                  style={{ width: 40, height: 40 }}
-                />
+               <img
+  src={Logo}
+  alt="BizStock Logo"
+  width={40}
+  height={53}
+  className="img-fluid"
+/>
               </div>
 
               <div className="d-flex flex-column">

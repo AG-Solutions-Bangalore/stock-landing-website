@@ -60,7 +60,8 @@ const PopupContactForm = () => {
                 cursor: "pointer",
                 color: "#999",
               }}
-            >
+               aria-label="Cancel"
+>
               ×
             </button>
 
